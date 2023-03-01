@@ -10,7 +10,7 @@ import {
 import React from 'react';
 import Icon from 'react-native-vector-icons/AntDesign';
 
-const LoginPage = () => {
+const LoginPage = ({navigation}) => {
   return (
     <>
       <Image
@@ -30,7 +30,9 @@ const LoginPage = () => {
           <Text style={styles.password}>PASSWORD</Text>
           <Text style={styles.email}>************</Text>
           <Text style={styles.forgot}>Forgot Password?</Text>
-          <TouchableOpacity style={styles.loginButton}>
+          <TouchableOpacity
+            style={styles.loginButton}
+            onPress={() => navigation.navigate('Profile')}>
             <Text style={{color: '#FF3530', fontSize: 15, fontWeight: 'bold'}}>
               LOGIN
             </Text>

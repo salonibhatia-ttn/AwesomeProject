@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 
-const HomePage = () => {
+const HomePage = ({navigation}) => {
   return (
     <>
       <Image
@@ -28,7 +28,9 @@ const HomePage = () => {
             <Text style={{color: 'white', fontSize: 15}}>SIGN UP</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.loginButton}>
+          <TouchableOpacity
+            style={styles.loginButton}
+            onPress={() => navigation.navigate('Login')}>
             <Text style={{color: '#FF3530', fontSize: 15, fontWeight: 'bold'}}>
               LOGIN
             </Text>
